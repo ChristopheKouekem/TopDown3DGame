@@ -1347,6 +1347,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2587156182966324022, guid: d71fb8fdd7564124591ae9173367da6e, type: 3}
   m_PrefabInstance: {fileID: 1000483645}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1020758894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5093063254712403912, guid: 52b2fb11c7345034ca68e82673488f0f, type: 3}
+  m_PrefabInstance: {fileID: 3605152882240683811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1020758900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020758894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10c157621e8b7c4bb171a80d24d5334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals: []
+  speed: 3
 --- !u!1 &1055085747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2884,11 +2903,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6553314652148381726, guid: 96d6dc506dc4a5d45b760ac79f9f9859, type: 3}
       propertyPath: goals.Array.data[0].x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6553314652148381726, guid: 96d6dc506dc4a5d45b760ac79f9f9859, type: 3}
       propertyPath: goals.Array.data[0].z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2967,10 +2986,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 388430839571981926, guid: 52b2fb11c7345034ca68e82673488f0f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5093063254712403912, guid: 52b2fb11c7345034ca68e82673488f0f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1020758900}
   m_SourcePrefab: {fileID: 100100000, guid: 52b2fb11c7345034ca68e82673488f0f, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
