@@ -1,24 +1,29 @@
 using System.Threading;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class enemy : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private NavMeshAgent agent;
+    private int currentIndex;
+    public Vector3[] goals;
+    public float speed;
     void Start()
     {
-
+        agent = GetComponent<NavMeshAgent>();
+        agent.SetDestination(goals[currentIndex]);
     }
     float count;
     Vector3 direction = Vector3.back;
-    // Update is called once per frame
     void Update()
     {
-        count += Time.deltaTime;
-        if (count > 2.5f)
+        float distance = (goals[currentIndex] - transform.position).magnitude;
+
+        if (distance < 0.5f && currentIndex + 1 < goals.Length)
         {
-            direction *= 1;
-            count = 0;
+            currentIndex++;
+            agent.SetDestination(goals[currentIndex]);
         }
-        transform.position += direction * Time.deltaTime;
     }
 }
